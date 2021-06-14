@@ -1,0 +1,10 @@
+{
+  "name": "frontend-coding-challenge",
+  "version": "1.0.0",
+  "description": "Frontend Coding Challenge",
+  "main": "src/index.js",
+  "repository": "https://gitlab.com/mattvick/frontend-coding-challenge.git",
+  "author": "Matthew <m@vi.pe>",
+  "license": "MIT",
+  "private": true
+}
