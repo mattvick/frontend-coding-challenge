@@ -6,6 +6,8 @@ import {
   Route,
 } from 'react-router-dom';
 
+import './style.scss';
+
 import Movie from './Movie';
 import Search from './Search';
 
