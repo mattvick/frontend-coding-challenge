@@ -6,7 +6,7 @@ Build a UI to search the Movie DB: The user should be able to enter some text in
 
 ## Documentation
 
-Setting up React, webpack and Babel adds some overhead. This is a tiny project so I considered using vanilla JavaScript, but as the role you are looking to fill will be using React I've used solved the challenge using React.
+Setting up React, webpack and Babel adds some overhead. This is a tiny project so I considered using vanilla JavaScript, but as the role you are looking to fill will be using React I've solved the challenge using React.
 
 I've created a simple custom hook to debounce the Movie DB API requests.
 
