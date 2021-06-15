@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 import useDebounce from './useDebounce';
 import { searchMovies } from './http';
@@ -33,14 +34,31 @@ const Search = () => {
 
   return (
     <>
+      <label htmlFor="search">Movie search</label>
       <input
-        defaultValue={initialQuery}
+        id="search"
+        type="search"
+        autoComplete="off"
+        placeholder="Type a movie title here, e.g Fight Club"
+        value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
       {movies && movies.length ? (
-        <ul>
-          {movies.map(({ id, title }) => (
-            <li key={id}>{title}</li>
+        <ul className="dropdown">
+          {movies.map(({ id, title, releaseDate }) => (
+            <li key={id}>
+              <Link
+                to={{
+                  pathname: `/movie/${id}`,
+                }}
+                onClick={() => {
+                  setQuery(initialQuery);
+                  setMovies([]);
+                }}
+              >
+                {title} ({ releaseDate && releaseDate.substring(0,4) })
+              </Link>
+            </li>
           ))}
         </ul>
       ) : null}
