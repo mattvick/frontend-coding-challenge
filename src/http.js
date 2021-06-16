@@ -14,7 +14,21 @@ const getMovie = (id, token) => axios
   .get(`/movie/${id}`, {
     cancelToken: token,
   })
-  .then(({ data: { id, title, overview, release_date: releaseDate } }) => ({ id, title, overview, releaseDate }));
+  .then(({
+    data: {
+      id,
+      title,
+      overview,
+      release_date: releaseDate,
+      poster_path: posterPath,
+    },
+  }) => ({
+    id,
+    title,
+    overview,
+    releaseDate,
+    posterPath,
+  }));
 
 export {
   searchMovies,
