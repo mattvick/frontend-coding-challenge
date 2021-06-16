@@ -44,3 +44,15 @@ input[type="search"] {
 p {
   line-height: 1.6;
 }
+
+.row {
+  display: flex;
+}
+
+.row div {
+  flex: 92px;
+}
+
+.row p {
+  margin: 0 0 0 1rem;
+}
