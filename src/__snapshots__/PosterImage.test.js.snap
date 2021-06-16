@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PosterImage matches snapshot 1`] = `
+<img
+  alt="Movie poster image"
+  src="//image.tmdb.org/t/p/w92/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg"
+/>
+`;
