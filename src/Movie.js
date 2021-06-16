@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 import { getMovie } from './http';
+import PosterImage from './PosterImage';
 
 const Movie = () => {
   const [movie, setMovie] = React.useState();
@@ -25,18 +26,18 @@ const Movie = () => {
   }, [id]);
 
   if (!movie) {
-    return (
-      <>
-        <h2>404</h2>
-        <p>Page not found.</p>
-      </>
-    );
+    return <p>Loading...</p>;
   }
 
   return (
     <>
       <h2>{movie.title} ({movie.releaseDate && movie.releaseDate.substring(0,4)})</h2>
-      <p>{movie.overview}</p>
+      <div className="row">
+        <div>
+          <PosterImage path={movie.posterPath} alt={`${movie.title} movie poster`} />
+        </div>
+        <p>{movie.overview}</p>
+      </div>
     </>
   );
 };
